@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+body{
+    font-family: 'Lato', sans-serif;
+    color: #FCA311;
+    background: url(asset/img/restaurant-background.jpg)center/cover
+    fixed no-repeat;
+}
+
+.info{
+    background: #ffbf69;
+}
+
+
+.primary-color{
+    color: #00171f;
+}
+
+.info img{
+    width: 150px;
+    display: block;
+    height: auto;
+    max-width: 100%;
+} 
+
+.info a{
+    transition: color 0.5s ease-in-out;
+}
+
+.info a:hover{
+    color: #E5E5E5;
+}
+
+/* Bagian Header */
+#header{
+    min-height: calc(100vh - 94px);
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) 
+    ,url(asset/img/coffee-background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.height-90{
+    min-height: calc(100vh - 94px);
+    
+}
+
+.banner h1{
+    border-top: 6px groove #FCA311;
+    border-bottom: 6px groove #FCA311;
+    animation: fromLeft;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fromLeft{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(30px);
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.main-btn{
+    color: #e2711d;
+    font-size: 1.5rem;
+    border: 3px solid #e2711d;
+    transition: all 0.5s ease-in-out;
+}
+
+.main-btn:hover{
+    color: #f4f3ee;
+    border: 2px solid #FCA311;
+    background: #FCA311;
+}
+
+.cafe-btn{
+    animation: fromRight;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fromRight{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(-0px);
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.header-link{
+    display: inline-block;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    background: #5c677d;
+    border-radius: 10px;
+    transition: all 1s ease;
+    animation: fromBottom;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.header-link:hover{
+   color: #e2711d;
+}
+
+@keyframes fromBottom{
+    0%{
+        transform: translateY(-10px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+
+/* Untuk Navbar */
+.navbar-brand img{
+    width: 100px;
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.nav-item{
+    padding: 8px;
+    line-height: 1.5;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    color: white;
+}
+
+/* Untuk Carousel */
+.carousel-caption.d-none.d-md-block{
+    color: #00b4d8;
+}
+
+/* Untuk Menu */
+.item-container{
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgb(0,0,0), rgb(0,0,0));
+    transition: all 2s ease;
+}
+
+.item-img{
+    transition: all 2s ease;
+}
+
+.item-container:hover .item-img{
+    transform: scale(1.2);
+    opacity: 0.5;
+}
+
+.item-link{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ff1654;
+    font-size: 2rem;
+    font-weight: 700;
+    border-top: 3px solid #ff1654;
+    border-bottom: 3px solid #ff1654;
+    transition: all 2s ease;
+    /* opacity: 0; */
+}
+
+.item-container:hover .item-link{
+    opacity: 1;
+}
+
+.item-link:hover{
+    color: #f4f3ee;
+    border: 3px solid #f4f3ee;
+    background: #f4f3ee;
+    color: #ff1654;
+}
+
+.item-container:hover{
+    outline: 5px solid #ff1654;
+    outline-offset: 0.5rem;
+}
+
+/* Katalog Menu */
+/* .single-item-text{
+    border: 5px solid #e2711d;
+    position: relative;
+} */
+
+/* .menu-zelict{
+    padding: 5px;
+    margin: 5px;
+} */
+
+#menu-zelict{
+    padding: 50px 70px 0;
+    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), 
+    url(asset/img/meja-background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.kolom-pesan{
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px 5px #ffba08;
+    color: #000000;
+}
+
+.kolom-pesan h2{
+    margin-bottom: 10px;
+}
+
+.kolom-pesan p{
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.data-box{
+    background: #FCA311;
+    width: 400px;
+    height: 500px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    box-shadow: 1px 1px 5px 1px #FCA311;
+    border-radius: 15px;
+    float: left;
+    color: #011627;
+}
+
+.data-box img{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.data-box h2, h3{
+    padding: 5px 10px;
+    width: 100%;
+    text-overflow: ellipsis;
+    color: #011627;
+}
+
+.data-box h3{
+    color: #011627;
+}
+
+/* .data-box p {
+    width: 100%;
+    height: 30%;
+    padding: 10px 20px;
+    background-image: transparent;
+    text-overflow: ellipsis;
+} */
+
+.data-box a {
+    margin: 3px 10px;
+    background-color: #e2711d;
+    color: #ffffff;
+    padding: 10px 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.data-box:hover{
+    box-shadow: 1px 1px 5px 0 #00b4d8;
+}
+
+/* About Us */
+.btn.main-btn.my-4.text-capitalize{
+    color: #011627;
+    font-size: 1.5rem;
+    border: 3px solid #011627;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn.main-btn.my-4.text-capitalize:hover{
+    color: #011627;
+    border: 2px solid #011627;
+    background: #ffba08;
+}
+
+.col-md-6.my-4 h1, h2{
+    color: #ffba08;
+}
